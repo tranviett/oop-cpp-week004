@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+// Bai 6: Tinh tong cac chu so
+void bai6() {
+    cout << "\n=== BAI 6: TINH TONG CAC CHU SO ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int tong = 0;
+    int temp = n;
+    while (temp > 0) {
+        tong += temp % 10;
+        temp /= 10;
+    }
+    cout << "Tong cac chu so: " << tong << endl;
+}

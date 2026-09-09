@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+// Bai 7: Uoc chung lon nhat
+void bai7() {
+    cout << "\n=== BAI 7: UOC CHUNG LON NHAT (UCLN) ===\n";
+    int a, b;
+    cout << "Nhap 2 so a va b: ";
+    cin >> a >> b;
+    int x = a, y = b;
+    while (y != 0) {
+        int r = x % y;
+        x = y;
+        y = r;
+    }
+    cout << "UCLN(" << a << ", " << b << ") = " << x << endl;
+}

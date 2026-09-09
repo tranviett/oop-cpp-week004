@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+// Bai 9: Tinh luy thua x^n
+void bai9() {
+    cout << "\n=== BAI 9: TINH LUY THUA X^N ===\n";
+    double x;
+    int n;
+cout << "Nhap co so x va so mu n: ";
+    cin >> x >> n;
+    double ketQua = 1;
+    for (int i = 1; i <= n; i++) {
+        ketQua *= x;
+    }
+    cout << x << "^" << n << " = " << ketQua << endl;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+// Bai 2: Tinh n!
+void bai2() {
+    cout << "\n=== BAI 2: TINH N! ===\n";
+    int n;
+    cout << "Nhap n (n >= 0): ";
+    cin >> n;
+    long long giaiThua = 1;
+    for (int i = 1; i <= n; i++) {
+        giaiThua *= i;
+    }
+    cout << n << "! = " << giaiThua << endl;
+}

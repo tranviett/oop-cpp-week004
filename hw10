@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+// Bai 10: Dem so luong uoc cua n
+void bai10() {
+    cout << "\n=== BAI 10: DEM SO LUONG UOC CUA N ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int dem = 0;
+    cout << "Divisors: ";
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            cout << i << " ";
+            dem++;
+        }
+    }
+    cout << endl;
+    cout << "Number of divisors: " << dem << endl;
+}
+
+int main() {
+    bai1();
+    bai2();
+    bai3();
+    bai4();
+    bai5();
+    bai6();
+    bai7();
+    bai8();
+    bai9();
+    bai10();
+
+    return 0;
+}

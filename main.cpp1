@@ -1,0 +1,174 @@
+#include <iostream>
+using namespace std;
+
+// Bai 1: Tim so lon nhat trong 3 so
+void bai1() {
+    cout << "\n=== BAI 1: TIM SO LON NHAT TRONG 3 SO ===\n";
+    int a, b, c;
+    cout << "Nhap a, b, c: ";
+    cin >> a >> b >> c;
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    cout << "So lon nhat la: " << max << endl;
+}
+
+// Bai 2: Tinh n!
+void bai2() {
+    cout << "\n=== BAI 2: TINH N! ===\n";
+    int n;
+    cout << "Nhap n (n >= 0): ";
+    cin >> n;
+    long long giaiThua = 1;
+    for (int i = 1; i <= n; i++) {
+        giaiThua *= i;
+    }
+    cout << n << "! = " << giaiThua << endl;
+}
+
+// Bai 3: Kiem tra so hoan hao
+void bai3() {
+    cout << "\n=== BAI 3: KIEM TRA SO HOAN HAO ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int tongUoc = 0;
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0) {
+            tongUoc += i;
+        }
+    }
+    if (tongUoc == n && n > 0) {
+        cout << n << " la so hoan hao." << endl;
+    } else {
+        cout << n << " khong phai la so hoan hao." << endl;
+    }
+}
+
+// Bai 4: Kiem tra so doi xung
+void bai4() {
+    cout << "\n=== BAI 4: KIEM TRA SO DOI XUNG ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int temp = n;
+    int daoNguoc = 0;
+    while (temp > 0) {
+        daoNguoc = daoNguoc * 10 + (temp % 10);
+        temp /= 10;
+    }
+    if (daoNguoc == n) {
+        cout << n << " la so doi xung." << endl;
+    } else {
+        cout << n << " khong phai la so doi xung." << endl;
+    }
+}
+
+// Bai 5: Dao nguoc so
+void bai5() {
+    cout << "\n=== BAI 5: DAO NGUOC SO ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int daoNguoc = 0;
+    int temp = n;
+    while (temp > 0) {
+        daoNguoc = daoNguoc * 10 + (temp % 10);
+        temp /= 10;
+    }
+    cout << "So dao nguoc: " << daoNguoc << endl;
+}
+
+// Bai 6: Tinh tong cac chu so
+void bai6() {
+    cout << "\n=== BAI 6: TINH TONG CAC CHU SO ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int tong = 0;
+    int temp = n;
+    while (temp > 0) {
+        tong += temp % 10;
+        temp /= 10;
+    }
+    cout << "Tong cac chu so: " << tong << endl;
+}
+
+// Bai 7: Uoc chung lon nhat
+void bai7() {
+    cout << "\n=== BAI 7: UOC CHUNG LON NHAT (UCLN) ===\n";
+    int a, b;
+    cout << "Nhap 2 so a va b: ";
+    cin >> a >> b;
+    int x = a, y = b;
+    while (y != 0) {
+        int r = x % y;
+        x = y;
+        y = r;
+    }
+    cout << "UCLN(" << a << ", " << b << ") = " << x << endl;
+}
+
+// Bai 8: Boi chung nho nhat
+void bai8() {
+    cout << "\n=== BAI 8: BOI CHUNG NHO NHAT (BCNN) ===\n";
+    int a, b;
+    cout << "Nhap 2 so a va b: ";
+    cin >> a >> b;
+    int x = a, y = b;
+    while (y != 0) {
+        int r = x % y;
+        x = y;
+        y = r;
+    }
+    int ucln = x;
+    long long bcnn = (1LL * a * b) / ucln;
+    cout << "BCNN(" << a << ", " << b << ") = " << bcnn << endl;
+}
+
+// Bai 9: Tinh luy thua x^n
+void bai9() {
+    cout << "\n=== BAI 9: TINH LUY THUA X^N ===\n";
+    double x;
+    int n;
+cout << "Nhap co so x va so mu n: ";
+    cin >> x >> n;
+    double ketQua = 1;
+    for (int i = 1; i <= n; i++) {
+        ketQua *= x;
+    }
+    cout << x << "^" << n << " = " << ketQua << endl;
+}
+
+// Bai 10: Dem so luong uoc cua n
+void bai10() {
+    cout << "\n=== BAI 10: DEM SO LUONG UOC CUA N ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int dem = 0;
+    cout << "Divisors: ";
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            cout << i << " ";
+            dem++;
+        }
+    }
+    cout << endl;
+    cout << "Number of divisors: " << dem << endl;
+}
+
+int main() {
+    bai1();
+    bai2();
+    bai3();
+    bai4();
+    bai5();
+    bai6();
+    bai7();
+    bai8();
+    bai9();
+    bai10();
+
+    return 0;
+}

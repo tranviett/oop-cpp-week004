@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+// Bai 5: Dao nguoc so
+void bai5() {
+    cout << "\n=== BAI 5: DAO NGUOC SO ===\n";
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    int daoNguoc = 0;
+    int temp = n;
+    while (temp > 0) {
+        daoNguoc = daoNguoc * 10 + (temp % 10);
+        temp /= 10;
+    }
+    cout << "So dao nguoc: " << daoNguoc << endl;
+}
